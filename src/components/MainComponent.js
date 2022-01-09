@@ -1,11 +1,10 @@
 import { Navbar, NavbarBrand } from "reactstrap";
-import { Menu } from "./components/MenuComponent";
+import { Menu } from "./MenuComponent";
 import { DISHES } from "./shared/dishes";
-
-import "./App.css";
 import { useState } from "react/cjs/react.development";
+import { DishDetail } from "./DishDetail";
 
-function App() {
+function MainComponent() {
   const [dishes, setDishes] = useState(DISHES);
 
   return (
@@ -16,8 +15,9 @@ function App() {
         </div>
       </Navbar>
       <Menu dishes={dishes} />
+      <DishDetail dishes={dishes} />
     </div>
   );
 }
 
-export default App;
+export default MainComponent;
